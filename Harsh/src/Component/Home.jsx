@@ -14,7 +14,9 @@ import { ReactTyped } from "react-typed";
 const Home = () => {
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto px-6 md:px-20 my-16">
+      <div
+      name="Home"
+       className="max-w-screen-2xl container mx-auto px-6 md:px-20 my-16">
         <div className="flex flex-col-reverse md:flex-row items-center gap-12">
           {/* Left Side - Text Content */}
           <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
