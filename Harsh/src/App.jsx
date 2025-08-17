@@ -8,6 +8,7 @@ import About from './Component/About'
 import ProtFolio from './Component/ProtFolio'
 import Experiance from './Component/Experience'
 import Footer from './Component/Footer'
+import Contact from './Component/Contact'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
     <  About/>
     <  ProtFolio/>
     <  Experiance/>
+    <  Contact/>
     <  Footer/>
     </>
   )
