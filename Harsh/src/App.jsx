@@ -9,19 +9,23 @@ import ProtFolio from './Component/ProtFolio'
 import Experiance from './Component/Experience'
 import Footer from './Component/Footer'
 import Contact from './Component/Contact'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <  Navbar/>
+   <div>
+     <  Navbar/>
     <  Home/>
     <  About/>
     <  ProtFolio/>
     <  Experiance/>
     <  Contact/>
     <  Footer/>
+   </div>
+   <Toaster/>
     </>
   )
 }

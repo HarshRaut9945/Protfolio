@@ -1,48 +1,67 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div name="About" className="max-w-screen-2xl container mx-auto px-6 md:px-20 my-16">
+    <div
+      name="About"
+      className="max-w-screen-2xl container mx-auto px-6 md:px-20 my-16 text-gray-200"
+    >
       {/* About Section */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4 text-gray-800">About Me</h1>
-        <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center mb-16"
+      >
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text text-transparent">
+          About Me
+        </h1>
+        <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto text-lg">
           Hello, I'm{" "}
-          <span className="font-semibold text-green-600">Harsh</span>, a
+          <span className="font-semibold text-green-400">Harsh</span>, a
           passionate <span className="font-semibold">Web Developer</span> with
           expertise in the{" "}
-          <span className="font-semibold text-green-600">MERN Stack</span>. With
-          a strong background in IT, I enjoy building modern, responsive, and
-          user-friendly applications. My goal is to craft{" "}
-          <span className="italic">impactful</span> and{" "}
-          <span className="italic">visually stunning</span> solutions that
-          create meaningful digital experiences.
+          <span className="font-semibold text-cyan-400">MERN Stack</span>. I
+          enjoy building modern, responsive, and user-friendly applications with
+          impactful and visually stunning solutions.
         </p>
-      </div>
+      </motion.div>
 
       {/* Education & Training */}
-      <div className="mb-12">
-        <h2 className="text-green-600 font-semibold text-2xl mb-3">
-          Education & Training
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="mb-12 bg-gray-900/60 p-6 rounded-xl shadow-lg hover:shadow-green-400/30 transition"
+      >
+        <h2 className="text-green-400 font-semibold text-2xl mb-4">
+          🎓 Education & Training
         </h2>
-        <ul className="list-disc list-inside text-gray-700 space-y-2">
-          <li>
-            B.Tech in Computer Science & Design – GNIOT (2022 – 2026)
-          </li>
+        <ul className="list-disc list-inside space-y-2 text-gray-300">
+          <li>B.Tech in Computer Science & Design – GNIOT (2022 – 2026)</li>
           <li>Frontend Development Certification – (2024)</li>
           <li>Data Structures & Algorithms in Java – (2024)</li>
           <li>Data Analytics with Excel & Power BI – Udemy (2024)</li>
           <li>SQL for Data Analysis – Coursera (2024)</li>
           <li>MongoDB Essentials – MongoDB University (2024)</li>
         </ul>
-      </div>
+      </motion.div>
 
       {/* Skills */}
-      <div className="mb-12">
-        <h2 className="text-green-600 font-semibold text-2xl mb-3">
-          Skills & Expertise
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="mb-12 bg-gray-900/60 p-6 rounded-xl shadow-lg hover:shadow-cyan-400/30 transition"
+      >
+        <h2 className="text-cyan-400 font-semibold text-2xl mb-4">
+          ⚡ Skills & Expertise
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
           <ul className="list-disc list-inside space-y-1">
             <li>HTML, CSS, JavaScript, Tailwind CSS</li>
             <li>React.js, Node.js, MongoDB</li>
@@ -54,69 +73,78 @@ const About = () => {
             <li>Team Collaboration & Communication</li>
           </ul>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Professional Experience */}
-      <div className="mb-12">
-        <h2 className="text-green-600 font-semibold text-2xl mb-3">
-          Professional Experience
+      {/* Experience */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="mb-12 bg-gray-900/60 p-6 rounded-xl shadow-lg hover:shadow-green-400/30 transition"
+      >
+        <h2 className="text-green-400 font-semibold text-2xl mb-4">
+          💼 Professional Experience
         </h2>
-        <ul className="list-disc list-inside text-gray-700 space-y-3">
+        <ul className="list-disc list-inside space-y-3 text-gray-300">
           <li>
-            <strong>Frontend Development Projects</strong> (2023 – Present) –
-            Built responsive and interactive web applications using React,
-            Tailwind CSS, and JavaScript.
+            <strong>Frontend Development Projects</strong> – Built responsive and
+            interactive web apps using React & Tailwind.
           </li>
           <li>
-            <strong>Data Handling & Visualization</strong> (2024 – Present) –
-            Hands-on practice with MS Excel, SQL, and Power BI for analytics and
-            dashboards.
+            <strong>Data Handling & Visualization</strong> – Analytics with SQL,
+            Excel & Power BI dashboards.
           </li>
           <li>
-            <strong>DSA in Java</strong> (2023 – Present) – Practicing problem
-            solving and algorithms to strengthen coding skills.
+            <strong>DSA in Java</strong> – Strengthening algorithms & problem-solving.
           </li>
           <li>
-            <strong>Certifications & Coursework</strong> – Completed multiple
-            certifications in Frontend & DSA in Java.
+            <strong>Certifications & Coursework</strong> – Multiple technical
+            certifications in frontend & DSA.
           </li>
         </ul>
-      </div>
+      </motion.div>
 
       {/* Achievements */}
-      <div className="mb-12">
-        <h2 className="text-green-600 font-semibold text-2xl mb-3">
-          Achievements & Awards
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="mb-12 bg-gray-900/60 p-6 rounded-xl shadow-lg hover:shadow-cyan-400/30 transition"
+      >
+        <h2 className="text-cyan-400 font-semibold text-2xl mb-4">
+          🏆 Achievements & Awards
         </h2>
-        <ul className="list-disc list-inside text-gray-700 space-y-2">
+        <ul className="list-disc list-inside space-y-2 text-gray-300">
           <li>Frontend Development Certification – (2024)</li>
           <li>DSA in Java Certification – (2024)</li>
+          <li>Consistent Academic Performance – B.Tech (2022 – 2026)</li>
           <li>
-            Consistent Academic Performance – B.Tech (Batch 2022 – 2026)
-          </li>
-          <li>
-            Built personal projects – Chatbot UI, Portfolio Website, Data
-            Dashboards (2023 – 2025)
+            Built personal projects – Chatbot UI, Portfolio Website, Dashboards
           </li>
         </ul>
-      </div>
+      </motion.div>
 
-      {/* Mission Statement */}
-      <div className="mb-12">
-        <h2 className="text-green-600 font-semibold text-2xl mb-3">
-          Mission Statement
+      {/* Mission */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="bg-gray-900/60 p-6 rounded-xl shadow-lg hover:shadow-green-400/30 transition"
+      >
+        <h2 className="text-green-400 font-semibold text-2xl mb-4">
+          🚀 Mission Statement
         </h2>
-        <p className="text-gray-700 leading-relaxed">
-          My mission is to leverage my skills in web development and data
+        <p className="text-gray-300 leading-relaxed">
+          My mission is to leverage my skills in web development & data
           technologies to create impactful, user-friendly, and efficient
-          solutions. I aim to combine my knowledge of the MERN stack, SQL, Excel,
-          and Power BI to build applications that not only solve real-world
-          problems but also deliver meaningful insights. I am committed to
-          continuous learning, embracing new challenges, and growing into a
-          versatile IT professional who adds value to every project and team I
-          collaborate with.
+          solutions. I aim to combine my MERN stack expertise with SQL, Excel,
+          and Power BI to build apps that solve real-world problems while
+          delivering meaningful insights.
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 };
