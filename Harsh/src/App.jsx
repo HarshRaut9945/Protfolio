@@ -10,6 +10,7 @@ import Experiance from './Component/Experience'
 import Footer from './Component/Footer'
 import Contact from './Component/Contact'
 import { Toaster } from 'react-hot-toast'
+import Projects from './Component/Projects'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
     <  About/>
     <  ProtFolio/>
     <  Experiance/>
+    <  Projects/>
     <  Contact/>
     <  Footer/>
    </div>
