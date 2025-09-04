@@ -22,7 +22,7 @@ function Footer() {
             <a href="https://www.instagram.com/" className="hover:text-pink-500 transition-colors duration-300">
               <FaInstagram size={22} />
             </a>
-            <a href="#" className="hover:text-blue-400 transition-colors duration-300">
+            <a href="https://www.linkedin.com/in/harsh-raut-417951291/" className="hover:text-blue-400 transition-colors duration-300">
               <FaLinkedinIn size={22} />
             </a>
           </div>
