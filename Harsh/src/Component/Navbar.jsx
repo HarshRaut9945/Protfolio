@@ -9,7 +9,7 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("Home");
 
   // Sample profile image - replace with your actual image
-  const pic = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&auto=format";
+  const pic = "photo.avif";
 
   const navItem = [
     { id: 1, title: "Home", icon: "🏠" },

@@ -31,6 +31,28 @@ const Home = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
+  // CV Download Function
+  const handleDownloadCV = () => {
+    try {
+      // Create a link element
+      const link = document.createElement('a');
+      
+      // Set the href to your PDF file path (stored in public/assets folder)
+      link.href = '/assets/resume_Harsh(1).pdf';
+      
+      // Set the download attribute with desired filename
+      link.download = 'Harsha_Raut_Resume.pdf';
+      
+      // Append to body, click, and remove
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Error downloading CV:', error);
+      alert('Sorry, there was an error downloading the CV. Please try again.');
+    }
+  };
+
   const skillIcons = [
     { Icon: SiMongodb, color: "text-green-500", name: "MongoDB" },
     { Icon: SiExpress, color: "text-gray-700", name: "Express.js" },
@@ -113,7 +135,10 @@ const Home = () => {
               <div className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start transform transition-all duration-1000 delay-1000 ${
                 isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'
               }`}>
-                <button className="group flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <button 
+                  onClick={handleDownloadCV}
+                  className="group flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
                   <FaDownload className="group-hover:animate-bounce" />
                   Download CV
                 </button>
