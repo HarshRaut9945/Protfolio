@@ -33,7 +33,7 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Location",
-      info: "Muzaffarpur, Bihar, India",
+      info: "Greater Noida",
       color: "from-blue-500 to-cyan-500"
     },
     {
